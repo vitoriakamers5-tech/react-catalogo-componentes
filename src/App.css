@@ -1,0 +1,115 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6fb;
+  color: #263247;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cabecalho {
+  background: #253b68;
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.cabecalho h1 {
+  margin: 0 0 12px;
+  font-size: 2.2rem;
+}
+
+.cabecalho p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+main {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 32px 20px;
+  flex: 1;
+}
+
+main h2 {
+  margin: 0 0 20px;
+  color: #253b68;
+}
+
+main section + section {
+  margin-top: 40px;
+}
+
+.lista-cursos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.card-curso,
+.destaque {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  border: 1px solid #dce3ef;
+  box-shadow: 0 4px 12px rgba(28, 45, 78, 0.06);
+}
+
+.card-curso h3,
+.destaque h3 {
+  color: #315ca8;
+  margin-top: 0;
+}
+
+.card-curso p,
+.destaque p {
+  line-height: 1.6;
+}
+
+.destaque {
+  margin-bottom: 16px;
+}
+
+.rodape {
+  background: #253b68;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.rodape p {
+  margin: 6px 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .cabecalho {
+    padding: 30px 16px;
+  }
+
+  .cabecalho h1 {
+    font-size: 1.7rem;
+  }
+
+  main {
+    padding: 24px 16px;
+  }
+
+  .lista-cursos {
+    grid-template-columns: 1fr;
+  }
+
+  .card-curso,
+  .destaque {
+    padding: 20px;
+  }
+}
